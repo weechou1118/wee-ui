@@ -8,28 +8,39 @@ const asideList = ref([
 </script>
 
 <template>
-  <div id="doc">
+  <div class="content">
     <aside>
+      <p class="title">组件</p>
       <ul>
         <li v-for="item in asideList" :key="item.name">
           <router-link :to="item.path">{{ item.name }}</router-link>
         </li>
       </ul>
     </aside>
-    <main class="content">
+    <main class="doc-content-container">
       <router-view></router-view>
     </main>
   </div>
 </template>
 
 <style scoped lang="scss">
-#doc {
+.content {
   display: flex;
-  margin-top: 10px;
+  height: calc(100% - 61px);
   aside {
+    position: absolute;
+    left: 0;
     height: 100%;
-    width: 300px;
-    padding: 0 10px;
+    width: 280px;
+    box-sizing: border-box;
+    padding: 20px 20px 0 30px;
+    color: #444;
+    border-right: 1px solid #ececec;
+    .title {
+      font-size: 14px;
+      margin: 10px 0;
+      font-weight: 500;
+    }
     & > ul {
       width: 100%;
       li {
@@ -53,9 +64,9 @@ const asideList = ref([
       }
     }
   }
-  .content {
-    width: 100%;
-    padding-left: 30px;
+  main {
+    // 280 + 20
+    padding-left: 300px;
   }
 }
 </style>
