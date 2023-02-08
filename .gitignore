@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# lock 文件
+yarn.lock
+package-lock.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
