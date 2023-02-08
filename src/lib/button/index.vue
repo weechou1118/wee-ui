@@ -48,7 +48,7 @@ $success-bg-color: #67c23a;
       color: #ccc;
       &:hover {
         color: $main-color;
-        background-color: $main-color;
+        border-color: $main-color;
       }
     }
     &--primary {
