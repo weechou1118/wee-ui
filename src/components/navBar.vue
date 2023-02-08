@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { version } from '../../package.json'
 </script>
 
 <!-- 顶部导航栏 -->
@@ -11,6 +12,7 @@
       <router-link to="/">首页</router-link>
       <router-link to="/doc">文档</router-link>
       <a href="https://github.com/weech0u/wee-ui" target="__blank">Github</a>
+      <span>{{ version }}</span>
     </div>
   </div>
 </template>
@@ -27,12 +29,14 @@
     height: 60px;
   }
   .right {
-    a {
+    span, a {
       display: inline-block;
       width: 80px;
       height: 60px;
-      color: #000;
       text-align: center;
+    }
+    a {
+      color: #000;
       text-decoration: none;
       &.router-link-active {
         color: cornflowerblue;
