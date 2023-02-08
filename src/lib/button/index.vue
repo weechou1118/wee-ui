@@ -29,8 +29,9 @@ const myClass = computed(() => {
 </script>
 
 <style scoped lang="scss">
-$primary-bg-color: #409eff;
-$success-bg-color: #67c23a;
+$primary-color: #409eff;
+$primary-hover-color: #66b1ff;
+$success-color: #67c23a;
 .wee-button {
   // 默认样式
   button {
@@ -52,13 +53,17 @@ $success-bg-color: #67c23a;
       }
     }
     &--primary {
-      background-color: $primary-bg-color;
-      border-color: $primary-bg-color;
+      background-color: $primary-color;
+      border-color: $primary-color;
       color: #fff;
+      &:hover {
+        background: #66b1ff;
+        border-color: #66b1ff;
+      }
     }
     &--success {
-      background-color: $success-bg-color;
-      border-color: $success-bg-color;
+      background-color: $success-color;
+      border-color: $success-color;
       color: #fff;
     }
     &--small {
