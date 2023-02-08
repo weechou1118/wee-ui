@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import NavBar from './components/navBar.vue'
 </script>
 
 <template>
-  <router-link to="/">首页</router-link>
-  <router-link to="/doc">文档</router-link>
+  <nav-bar />
   <router-view></router-view>
 </template>
 
