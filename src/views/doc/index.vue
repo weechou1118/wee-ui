@@ -1,21 +1,34 @@
 <!-- 文档页 -->
 <script setup lang="ts">
-import { ref } from 'vue'
+import { reactive } from 'vue'
 
-const asideList = ref([
-  { path: '/doc/button', name: 'Button 按钮' }
+const asideList = reactive([
+  {
+    title: '文档',
+    children: [
+      { path: '/doc/intro', name: '介绍' }
+    ]
+  },
+  {
+    title: '通用组件',
+    children: [
+      { path: '/doc/button', name: 'Button 按钮' }
+    ]
+  }
 ])
 </script>
 
 <template>
   <div class="content">
     <aside>
-      <p class="title">组件</p>
-      <ul>
-        <li v-for="item in asideList" :key="item.name">
-          <router-link :to="item.path">{{ item.name }}</router-link>
-        </li>
-      </ul>
+      <template v-for="item in asideList">
+        <p class="title">{{ item.title }}</p>
+        <ul>
+          <li v-for="child in item.children" :key="child.name">
+            <router-link :to="child.path">{{ child.name }}</router-link>
+          </li>
+        </ul>
+      </template>
     </aside>
     <main class="doc-content-container">
       <router-view></router-view>
@@ -40,6 +53,7 @@ const asideList = ref([
       font-size: 14px;
       margin: 10px 0;
       font-weight: 500;
+      user-select: none;
     }
     & > ul {
       width: 100%;
