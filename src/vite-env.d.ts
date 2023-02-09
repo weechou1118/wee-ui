@@ -4,3 +4,8 @@ declare module '*.vue' {
   const Component: ReturnType<typeof defineComponent>
   export default defaultComponent
 }
+
+declare module '*.md' {
+  const html: String
+  export { html }
+}
