@@ -3,14 +3,14 @@
     <h1>Button 按钮</h1>
     <p>列举常用的操作按钮</p>
     <div class="demo-block">
-      <wee-button>默认按钮</wee-button>
-      <wee-button theme="primary">主要按钮</wee-button>
+      <Preview :el="ButtonPreview1"></Preview>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import WeeButton from '@/lib/button/index.vue'
+import Preview from '@/components/Preview.vue'
+import ButtonPreview1 from './ButtonPreview1.preview.vue'
 </script>
 
 <style scoped lang="scss">
