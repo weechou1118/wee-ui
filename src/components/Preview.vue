@@ -10,13 +10,15 @@
       <component :is="el"></component>
     </div>
     <div v-if="!checkMode" class="preview-container-code">
-      <pre class="language-js">{{ el!.__sourceCode }}</pre>
+      <pre class="language-html" v-html="html"></pre>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import Prism from 'prismjs'
+import "prismjs/themes/prism.css";
 import Button from '@/lib/button/index.vue'
 const props = defineProps({
   el: {
@@ -25,6 +27,13 @@ const props = defineProps({
   }
 })
 const checkMode = ref(false)
+const html = computed(() => {
+  return Prism.highlight(
+    props.el!.__sourceCode,
+    Prism.languages.html,
+    'html'
+  )
+})
 </script>
 
 <style scoped lang="scss">

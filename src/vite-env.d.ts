@@ -9,3 +9,8 @@ declare module '*.md' {
   const html: String
   export { html }
 }
+
+declare module 'prismjs' {
+  import Prism from 'prismjs'
+  export default Prism
+}

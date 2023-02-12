@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "prismjs": "^1.29.0",
     "vite-plugin-markdown": "^2.1.0",
     "vue": "^3.2.45",
     "vue-router": "4"
