@@ -21,6 +21,10 @@ import { version } from '../../package.json'
 #navBar {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 60px;
   line-height: 60px;
   border-bottom: 1px solid #ececec;

@@ -13,5 +13,6 @@ import NavBar from './components/navBar.vue'
 @import "./assets/styles/style.scss";
 .app-container {
   height: 100vh;
+  overflow: hidden;
 }
 </style>

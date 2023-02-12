@@ -30,7 +30,7 @@ const asideList = reactive([
         </ul>
       </template>
     </aside>
-    <main class="doc-content-container">
+    <main>
       <router-view></router-view>
     </main>
   </div>
@@ -39,11 +39,15 @@ const asideList = reactive([
 <style scoped lang="scss">
 .content {
   display: flex;
-  height: calc(100% - 61px);
+  height: calc(100% - 60px);
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  overflow: auto;
   aside {
     position: absolute;
     left: 0;
-    height: 100%;
+    height: calc(100% - 60px);
     width: 280px;
     box-sizing: border-box;
     padding: 20px 20px 0 30px;
@@ -81,6 +85,7 @@ const asideList = reactive([
   main {
     // 280 + 20
     padding-left: 300px;
+    width: 100%;
   }
 }
 </style>
