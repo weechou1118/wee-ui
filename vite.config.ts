@@ -7,6 +7,7 @@ import vitePluginVue from './plugins/vue-custom-blocks-plugin'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), mdPlugin({ mode: [Mode.HTML] }), vitePluginVue],
+  base: './',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
