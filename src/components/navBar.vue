@@ -6,7 +6,7 @@ import { version } from '../../package.json'
 <template>
   <div id="navBar">
     <router-link to="/">
-      <img id="logo" src="@/assets/img/cat.jpg" alt="">
+      <img id="logo" src="../assets/img/cat.jpg" alt="">
     </router-link>
     <div class="right">
       <router-link to="/">首页</router-link>
