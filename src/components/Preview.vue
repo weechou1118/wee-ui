@@ -5,7 +5,7 @@
       <component :is="el"></component>
     </div>
     <div class="preview-container-code">
-      {{ el!.__sourceCode }}
+      <pre class="language-js">{{ el!.__sourceCode }}</pre>
     </div>
   </div>
 </template>
