@@ -36,6 +36,9 @@ const checkMode = ref(false)
     align-items: center;
     border-bottom: 1px solid #eaeaea;
     padding: 10px 20px;
+    button {
+      user-select: none;
+    }
   }
   &-component {
     padding: 10px 20px;

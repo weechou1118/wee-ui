@@ -28,6 +28,12 @@ const myClass = computed(() => {
 })
 </script>
 
+<script lang="ts">
+export default {
+  name: 'wee-button'
+}
+</script>
+
 <style scoped lang="scss">
 $primary-color: #409eff;
 $primary-hover-color: #66b1ff;

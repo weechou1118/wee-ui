@@ -4,5 +4,4 @@
 </template>
 
 <script setup lang="ts">
-import WeeButton from '@/lib/button/index.vue'
 </script>
