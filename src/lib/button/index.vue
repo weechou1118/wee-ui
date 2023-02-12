@@ -30,11 +30,12 @@ const myClass = computed(() => {
 
 <script lang="ts">
 export default {
-  name: 'wee-button'
+  name: 'WeeButton'
 }
 </script>
 
 <style scoped lang="scss">
+$main-color: #409eff;
 $primary-color: #409eff;
 $primary-hover-color: #66b1ff;
 $success-color: #67c23a;

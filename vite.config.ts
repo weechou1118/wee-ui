@@ -13,12 +13,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src')
     },
     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"]
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData:'@import "./src/assets/styles/style.scss";'
-      }
-    }
   }
 })
