@@ -45,9 +45,9 @@ const asideList = reactive([
   top: 60px;
   overflow: auto;
   aside {
-    position: absolute;
+    position: fixed;
     left: 0;
-    height: calc(100% - 60px);
+    height: 100%;
     width: 280px;
     box-sizing: border-box;
     padding: 20px 20px 0 30px;
