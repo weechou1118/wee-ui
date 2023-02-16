@@ -2,14 +2,14 @@
   <div class="preview-container">
     <h2 class="preview-container-title">
       {{ el!.__sourceCodeTitle }}
-      <Button @click="checkMode = !checkMode">
-        {{ checkMode ? '查看代码' : '隐藏代码'  }}
-      </Button>
+      <wee-button @click="checkMode = !checkMode">
+        {{ checkMode ? '隐藏代码' : '查看代码'  }}
+      </wee-button>
     </h2>
     <div class="preview-container-component">
       <component :is="el"></component>
     </div>
-    <div v-if="!checkMode" class="preview-container-code">
+    <div v-if="checkMode" class="preview-container-code">
       <pre class="language-html" v-html="html"></pre>
     </div>
   </div>
@@ -19,7 +19,6 @@
 import { ref, computed } from 'vue'
 import Prism from 'prismjs'
 import "prismjs/themes/prism.css";
-import Button from '@/lib/button/index.vue'
 const props = defineProps({
   el: {
     type: Object,
@@ -39,6 +38,8 @@ const html = computed(() => {
 <style scoped lang="scss">
 .preview-container {
   min-width: 400px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 40px;
   &-title {
     display: flex;
     justify-content: space-between;
@@ -51,6 +52,10 @@ const html = computed(() => {
   }
   &-component {
     padding: 10px 20px;
+    overflow: hidden;
+    :deep(.wee-button) {
+      float: left;
+    }
   }
   &-code {
     border-top: 1px dashed #eaeaea;

@@ -11,3 +11,14 @@ ul, h1, h2 {
   margin: 0;
   padding: 0;
 }
+
+.row {
+  overflow: hidden;
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+  &.flex {
+    display: flex;
+    align-items: center;
+  }
+}

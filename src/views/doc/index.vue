@@ -43,7 +43,7 @@ const asideList = reactive([
   width: 100%;
   position: absolute;
   top: 60px;
-  overflow: auto;
+  overflow: overlay;
   aside {
     position: fixed;
     left: 0;
