@@ -84,8 +84,11 @@ const asideList = reactive([
   }
   main {
     // 280 + 20
-    padding-left: 300px;
+    padding-left: 320px;
+    padding-top: 40px;
     width: 100%;
+    overflow: auto;
+    padding-bottom: 50px;
   }
 }
 </style>
