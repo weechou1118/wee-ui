@@ -9,17 +9,29 @@
       <Preview :el="ButtonPreview4"></Preview>
       <Preview :el="ButtonPreview5"></Preview>
     </div>
-    <!-- TODO 补充文档 -->
+    <h1>属性</h1>
+    <Doc :content="content" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import Preview from '@/components/Preview.vue'
 import ButtonPreview1 from './ButtonPreview1.preview.vue'
 import ButtonPreview2 from './ButtonPreview2.preview.vue'
 import ButtonPreview3 from './ButtonPreview3.preview.vue'
 import ButtonPreview4 from './ButtonPreview4.preview.vue'
 import ButtonPreview5 from './ButtonPreview5.preview.vue'
+import Doc from '@/components/Doc.vue'
+
+const content = ref([
+  ['theme', '按钮主题', 'String', 'common/primary/success/info/error', 'common'],
+  ['size', '按钮大小', 'String', 'small/medium/large', 'medium'],
+  ['loading', '是否加载', 'Boolean', '-', 'false'],
+  ['circle', '是否圆形按钮', 'Boolean', '-', 'false'],
+  ['round', '是否圆角按钮', 'Boolean', '-', 'false'],
+  ['disabled', '是否禁用', 'Boolean', '-', 'false'],
+])
 </script>
 
 <style scoped lang="scss">
@@ -32,13 +44,12 @@ p {
   font-size: 14px;
 }
 .doc-content {
-  padding: 20px;
   .preview-wrapper {
     width: 80%;
     box-sizing: border-box;
     align-items: center;
-    :deep(.wee-button:not(:first-child)) {
-      margin-left: 20px;
+    :deep(.wee-button:not(:last-child)) {
+      margin-right: 20px;
     }
   }
 }

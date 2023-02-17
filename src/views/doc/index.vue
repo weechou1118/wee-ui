@@ -1,6 +1,27 @@
 <!-- 文档页 -->
+<template>
+  <div class="content">
+    <aside>
+      <template v-for="item in asideList">
+        <p class="title">{{ item.title }}</p>
+        <ul>
+          <li v-for="child in item.children" :key="child.name">
+            <router-link :to="child.path">{{ child.name }}</router-link>
+          </li>
+        </ul>
+      </template>
+    </aside>
+    <main>
+      <router-view></router-view>
+      <PrevNext :routes="DocRoutes" />
+    </main>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { reactive } from 'vue'
+import PrevNext from '@/components/PrevNext.vue'
+import DocRoutes from '@/router/doc-routes'
 
 const asideList = reactive([
   {
@@ -17,24 +38,6 @@ const asideList = reactive([
   }
 ])
 </script>
-
-<template>
-  <div class="content">
-    <aside>
-      <template v-for="item in asideList">
-        <p class="title">{{ item.title }}</p>
-        <ul>
-          <li v-for="child in item.children" :key="child.name">
-            <router-link :to="child.path">{{ child.name }}</router-link>
-          </li>
-        </ul>
-      </template>
-    </aside>
-    <main>
-      <router-view></router-view>
-    </main>
-  </div>
-</template>
 
 <style scoped lang="scss">
 .content {
