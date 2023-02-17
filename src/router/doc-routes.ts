@@ -9,11 +9,17 @@ const IntroDoc = md(Intro)
 const routes = [
   {
     path: 'intro',
-    component: IntroDoc
+    component: IntroDoc,
+    meta: {
+      name: '介绍'
+    }
   },
   {
     path: 'button',
-    component: Button
+    component: Button,
+    meta: {
+      name: 'Button 按钮'
+    }
   }
 ]
 
