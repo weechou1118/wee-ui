@@ -5,7 +5,9 @@ import NavBar from './components/navBar.vue'
 <template>
   <div class="app-container">
     <nav-bar />
-    <router-view></router-view>
+    <div class="main-content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -13,5 +15,13 @@ import NavBar from './components/navBar.vue'
 .app-container {
   height: 100vh;
   overflow: hidden;
+  .main-content {
+    display: flex;
+    height: calc(100% - 60px);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    overflow: overlay;
+  }
 }
 </style>
