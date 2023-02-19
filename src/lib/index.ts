@@ -1,8 +1,9 @@
 import { App } from 'vue'
 import WeeButton from './button/index.vue'
-export { WeeButton }
+import WeeDialog from './dialog/index.vue'
+export { WeeButton, WeeDialog }
 
-const components = [WeeButton]
+const components = [WeeButton, WeeDialog]
 
 // 全局注册主键
 export function registerWeeUi(app: App): void {

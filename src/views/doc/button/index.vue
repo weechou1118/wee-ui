@@ -35,22 +35,9 @@ const content = ref([
 </script>
 
 <style scoped lang="scss">
-h1 {
-  font-weight: 400;
-  font-size: 28px;
-}
-p {
-  color: #5e6d82;
-  font-size: 14px;
-}
-.doc-content {
-  .preview-wrapper {
-    width: 80%;
-    box-sizing: border-box;
-    align-items: center;
-    :deep(.wee-button:not(:last-child)) {
-      margin-right: 20px;
-    }
+.preview-wrapper {
+  :deep(.wee-button:not(:last-child)) {
+    margin-right: 20px;
   }
 }
 </style>

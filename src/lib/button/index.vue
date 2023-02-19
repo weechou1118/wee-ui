@@ -48,7 +48,7 @@ const myClass = computed(() => {
   }
 })
 
-function getIconName() {
+const getIconName = () => {
   const iconMap: any = {
     game: GameControllerOutline
   }
@@ -102,7 +102,7 @@ $error-hover-color: #f78989;
 }
 
 .wee-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   // 样式

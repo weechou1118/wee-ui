@@ -1,4 +1,4 @@
-<preview>基础</preview>
+<preview>基础用法</preview>
 <template>
   <div class="row">
     <wee-button>默认按钮</wee-button>

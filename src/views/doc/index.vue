@@ -33,7 +33,8 @@ const asideList = reactive([
   {
     title: '通用组件',
     children: [
-      { path: '/doc/button', name: 'Button 按钮' }
+      { path: '/doc/button', name: 'Button 按钮' },
+      { path: '/doc/dialog', name: 'Dialog 对话框' }
     ]
   }
 ])
@@ -82,7 +83,6 @@ main {
   // 280 + 20
   padding-left: 320px;
   padding-top: 40px;
-  width: 100%;
   overflow: auto;
   padding-bottom: 50px;
 }

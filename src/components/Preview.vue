@@ -53,9 +53,6 @@ const html = computed(() => {
   &-component {
     padding: 10px 20px;
     overflow: hidden;
-    :deep(.wee-button) {
-      float: left;
-    }
   }
   &-code {
     border-top: 1px dashed #eaeaea;

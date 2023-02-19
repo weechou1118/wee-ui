@@ -1,5 +1,6 @@
 import { h } from 'vue'
 import Button from '@/views/doc/button/index.vue'
+import Dialog from '@/views/doc/dialog/index.vue'
 import Markdown from '@/components/Markdown.vue'
 
 const md = (html: any) => h(Markdown, { content: html })
@@ -19,6 +20,13 @@ const routes = [
     component: Button,
     meta: {
       name: 'Button 按钮'
+    }
+  },
+  {
+    path: 'dialog',
+    component: Dialog,
+    meta: {
+      name: 'Dialog 对话框'
     }
   }
 ]

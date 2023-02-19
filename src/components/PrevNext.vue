@@ -25,16 +25,16 @@ const currentRouteIndex = ref()
 const router = useRouter()
 const route = useRoute()
 
+// 路由跳转相关
+const setRouteIndex = (val: any) => {
+  const activeName = val.split('/').pop()
+  currentRouteIndex.value = routes.findIndex((item: any) => item.path === activeName)
+}
+
 // 监听路由变化
 watch(() => route.fullPath, (val) => {
   setRouteIndex(val)
 }, { immediate: true })
-
-// 路由跳转相关
-function setRouteIndex(val: any) {
-  const activeName = val.split('/').pop()
-  currentRouteIndex.value = routes.findIndex((item: any) => item.path === activeName)
-}
 
 const prevRoute: any = computed(() => {
   return routes[currentRouteIndex.value - 1]
@@ -43,7 +43,7 @@ const nextRoute: any = computed(() => {
   return routes[currentRouteIndex.value + 1]
 })
 
-function pageTurnHandle(isNext: Boolean) {
+const pageTurnHandle = (isNext: Boolean) => {
   const route: any = isNext ? nextRoute.value : prevRoute.value
   const path: string = route.path
   router.push({ path: `/doc/${path}` }) 
@@ -58,6 +58,7 @@ function pageTurnHandle(isNext: Boolean) {
   .prev, .next {
     cursor: pointer;
     color: #409eff;
+    user-select: none;
   }
   .prev {
     float: left;
