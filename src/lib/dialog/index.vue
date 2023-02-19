@@ -24,7 +24,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits } from 'vue'
 import WeeButton from '@/lib/button/index.vue'
 const props = defineProps({
   modelValue: {
