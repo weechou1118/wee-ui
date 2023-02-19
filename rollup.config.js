@@ -3,6 +3,13 @@ import vue from '@vitejs/plugin-vue'
 import scss from 'rollup-plugin-scss'
 import dartSass from 'sass'
 import { terser } from 'rollup-plugin-terser'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import alias from '@rollup/plugin-alias'
+import path from 'path'
+import { fileURLToPath } from 'url'
+// 代替__dirname的polyfill
+const __filenameNew = fileURLToPath(import.meta.url)
+const __dirnameNew = path.dirname(__filenameNew)
 
 export default {
   input: 'src/lib/index.ts', // 入口文件地址
@@ -24,7 +31,13 @@ export default {
       include: /.[jt]s$/,
       minify: process.env.NODE_ENV === 'production',
       target: 'es2015'
-    })
+    }),
+    alias({
+      entries: [
+        { find: '@', replacement: path.resolve(__dirnameNew, 'src') }
+      ]
+    }),
+    nodeResolve()
   ],
-  external: ['vue']
+  external: ['vue', 'prismjs', 'vite-plugin-markdown']
 }
