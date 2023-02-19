@@ -16,7 +16,6 @@ import NavBar from './components/navBar.vue'
   height: 100vh;
   overflow: hidden;
   .main-content {
-    display: flex;
     height: calc(100% - 60px);
     width: 100%;
     position: absolute;

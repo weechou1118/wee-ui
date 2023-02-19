@@ -14,9 +14,9 @@ import Cat from '@/assets/img/cat.jpg'
 
 <style scoped lang="scss">
 .intro-container {
-  margin: 0 auto;
+  transform: translateY(50%);
   .content {
-    transform: translateY(50%);
+    text-align: center;
     img {
       width: 200px;
       height: 200px;
