@@ -36,7 +36,7 @@ const props = defineProps({
   },
   content: {
     type: String,
-    default: ''
+    default: '内容'
   },
   overlayClosable: {
     type: Boolean,

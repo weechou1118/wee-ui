@@ -10,7 +10,7 @@
       <Preview :el="ButtonPreview5"></Preview>
     </div>
     <h1>属性</h1>
-    <Doc :content="content" />
+    <Doc type="attr" :content="content" />
   </div>
 </template>
 
