@@ -72,17 +72,6 @@ export default {
 </style>
 
 <style scoped lang="scss">
-$main-color: #409eff;
-$primary-color: #409eff;
-$primary-hover-color: #66b1ff;
-$success-color: #67c23a;
-$success-hover-color: #85ce61;
-$info-color: #909399;
-$info-hover-color: #a6a9ad;
-$warn-color: #e6a23c;
-$warn-hover-color: #ebb563;
-$error-color: #f56c6c;
-$error-hover-color: #f78989;
 
 // 默认样式
 .wee-button {
