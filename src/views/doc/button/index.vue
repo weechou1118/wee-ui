@@ -15,7 +15,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import Preview from '@/components/Preview.vue'
 import ButtonPreview1 from './ButtonPreview1.preview.vue'
 import ButtonPreview2 from './ButtonPreview2.preview.vue'
@@ -24,14 +23,14 @@ import ButtonPreview4 from './ButtonPreview4.preview.vue'
 import ButtonPreview5 from './ButtonPreview5.preview.vue'
 import Doc from '@/components/Doc.vue'
 
-const content = ref([
+const content = [
   ['theme', '按钮主题', 'String', 'common/primary/success/info/error', 'common'],
   ['size', '按钮大小', 'String', 'small/medium/large', 'medium'],
   ['loading', '是否加载', 'Boolean', '-', 'false'],
   ['circle', '是否圆形按钮', 'Boolean', '-', 'false'],
   ['round', '是否圆角按钮', 'Boolean', '-', 'false'],
   ['disabled', '是否禁用', 'Boolean', '-', 'false'],
-])
+]
 </script>
 
 <style scoped lang="scss">
