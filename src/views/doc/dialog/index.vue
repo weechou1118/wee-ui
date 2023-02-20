@@ -17,11 +17,9 @@
 </template>
 
 <script setup lang="ts">
-import Preview from '@/components/Preview.vue'
 import DialogPreview1 from './DialogPreview1.preview.vue'
 import DialogPreview2 from './DialogPreview2.preview.vue'
 import DialogPreview3 from './DialogPreview3.preview.vue'
-import Doc from '@/components/Doc.vue'
 
 const attrContent = [
   [ 'v-model', '绑定值，用于控制弹窗显隐', 'Boolean', '-', 'false' ],

@@ -15,13 +15,11 @@
 </template>
 
 <script setup lang="ts">
-import Preview from '@/components/Preview.vue'
 import ButtonPreview1 from './ButtonPreview1.preview.vue'
 import ButtonPreview2 from './ButtonPreview2.preview.vue'
 import ButtonPreview3 from './ButtonPreview3.preview.vue'
 import ButtonPreview4 from './ButtonPreview4.preview.vue'
 import ButtonPreview5 from './ButtonPreview5.preview.vue'
-import Doc from '@/components/Doc.vue'
 
 const content = [
   ['theme', '按钮主题', 'String', 'common/primary/success/info/error', 'common'],
