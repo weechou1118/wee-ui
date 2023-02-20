@@ -29,7 +29,7 @@ const attrContent = [
 ]
 
 const slotContent = [
-  [ '-', '弹窗的主体内容' ],
+  [ 'default', '弹窗的主体内容' ],
   [ 'header', '弹窗的标题内容' ],
   [ 'footer', '弹窗的底部内容' ]
 ]

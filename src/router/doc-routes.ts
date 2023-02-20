@@ -1,6 +1,7 @@
 import { h } from 'vue'
 import Button from '@/views/doc/button/index.vue'
 import Dialog from '@/views/doc/dialog/index.vue'
+import Link from '@/views/doc/link/index.vue'
 import Markdown from '@/components/Markdown.vue'
 
 const md = (html: any) => h(Markdown, { content: html })
@@ -28,7 +29,14 @@ const routes = [
     meta: {
       name: 'Dialog 对话框'
     }
-  }
+  },
+  {
+    path: 'link',
+    component: Link,
+    meta: {
+      name: 'Link 文字链接'
+    }
+  },
 ]
 
 export default routes
