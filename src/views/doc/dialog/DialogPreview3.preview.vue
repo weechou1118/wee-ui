@@ -1,6 +1,6 @@
 <preview>通过方法生成弹窗</preview>
 <template>
-  <wee-button theme="primary" @click="createDialog">打开对话框</wee-button>
+  <wee-button type="primary" @click="createDialog">打开对话框</wee-button>
 </template>
 
 <script setup lang="ts">

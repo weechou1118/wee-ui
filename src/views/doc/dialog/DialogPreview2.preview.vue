@@ -1,6 +1,6 @@
 <preview>可以通过点击遮罩层关闭弹窗</preview>
 <template>
-  <wee-button theme="primary" @click="dialogVisible = !dialogVisible">打开对话框</wee-button>
+  <wee-button type="primary" @click="dialogVisible = !dialogVisible">打开对话框</wee-button>
   <wee-dialog 
     v-model="dialogVisible"
     :content="content"

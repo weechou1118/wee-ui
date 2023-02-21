@@ -23,7 +23,7 @@ const props = defineProps({
     type: String,
     default: ''
   },
-  theme: {
+  type: {
     type: String,
     default: 'common'
   },
@@ -39,11 +39,11 @@ const props = defineProps({
     default: false
   }
 })
-const { target, href, theme, underline, icon } = props
+const { target, href, type, underline, icon } = props
 const attrs = useAttrs()
 const classes = computed(() => {
   return {
-    [`wee-link--${theme}`]: theme,
+    [`wee-link--${type}`]: type,
     [`is-disabled`]: attrs.hasOwnProperty('disabled'),
     [`is-no-underline`]: !underline
   }

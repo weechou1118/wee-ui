@@ -15,7 +15,7 @@
         <footer class="wee-dialog__footer">
           <slot name="footer">
             <wee-button @click="cancel">取消</wee-button>
-            <wee-button @click="confirm" theme="primary">确认</wee-button>
+            <wee-button @click="confirm" type="primary">确认</wee-button>
           </slot>
         </footer>
       </div>

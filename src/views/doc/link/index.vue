@@ -24,7 +24,7 @@ import linkPreview4 from './LinkPreview4.preview.vue'
 const attrContent = [
   [ 'target', '在何处显示链接的资源', 'String', '_self/_blank/_parent/_top', '_self' ],
   [ 'href', '跳转链接', 'String', '-', '-' ],
-  [ 'theme', '主题', 'String', 'primary/success/info/warn/error', '_self' ],
+  [ 'type', '主题', 'String', 'primary/success/info/warn/error', '_self' ],
   [ 'underline', '鼠标移上去是否显示下划线', 'Boolean', '-', 'true' ],
   [ 'icon', '图标', 'String / Component', '-', '-' ],
   [ 'toRight', '图标位置', 'Boolean', '-', 'false' ]

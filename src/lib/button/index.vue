@@ -14,7 +14,7 @@ import { GameControllerOutline } from '@vicons/ionicons5'
 import Loading from '@/components/loading.vue'
 const attrs = useAttrs()
 const props = defineProps({
-  theme: {
+  type: {
     type: String,
     default: 'common'
   },
@@ -31,7 +31,7 @@ const props = defineProps({
     default: false
   }
 })
-const { theme, size, icon, loading } = props
+const { type, size, icon, loading } = props
 
 const disabledClass = computed(() => {
   return loading || attrs.hasOwnProperty('disabled')
@@ -39,7 +39,7 @@ const disabledClass = computed(() => {
 
 const myClass = computed(() => {
   return {
-    [`wee-button--${theme}`]: theme,
+    [`wee-button--${type}`]: type,
     [`wee-button--${size}`]: size,
     ['is-dotted']: attrs.hasOwnProperty('dotted'),
     ['is-round']: attrs.hasOwnProperty('round'),

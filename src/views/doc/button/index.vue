@@ -22,7 +22,7 @@ import ButtonPreview4 from './ButtonPreview4.preview.vue'
 import ButtonPreview5 from './ButtonPreview5.preview.vue'
 
 const content = [
-  ['theme', '按钮主题', 'String', 'common/primary/success/info/error', 'common'],
+  ['type', '按钮主题', 'String', 'common/primary/success/info/error', 'common'],
   ['size', '按钮大小', 'String', 'small/medium/large', 'medium'],
   ['loading', '是否加载', 'Boolean', '-', 'false'],
   ['circle', '是否圆形按钮', 'Boolean', '-', 'false'],
