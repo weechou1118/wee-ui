@@ -1,20 +1,23 @@
 <preview>可编辑添加的标签</preview>
 <template>
-  <div class="row">
-      <Tag 
+  <div class="row flex">
+      <wee-tag 
         v-for="(item, index) in tags"
         :key="item.name"
         :type="item.type"
         @close="handleClose(index)"
         closable
-      >{{ item.name }}</Tag>
-      <!-- TODO 等input组件写完添到这边 -->
+      >{{ item.name }}</wee-tag>
+      <wee-button v-if="!showInput" @click="showInput = true">+ 新标签</wee-button>
+      <wee-input v-if="showInput" @blur="handleBlur"></wee-input>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import Tag from '@/lib/tag/index.vue'
+import WeeTag from '@/lib/tag/index.vue'
+import WeeInput from '@/lib/input/index.vue'
+import WeeButton from '@/lib/button/index.vue'
 
 const tags = ref([
   { name: '标签一', type: 'primary' },
@@ -27,4 +30,20 @@ const tags = ref([
 const handleClose = (i: any) => {
   tags.value.splice(i, 1)
 }
+
+const showInput = ref(false)
+
+const handleBlur = (val: string) => {
+  if (val) {
+    tags.value.push({ name: val, type: 'primary' })
+  }
+  showInput.value = false
+}
 </script>
+
+<style scoped lang="scss">
+.wee-button {
+  display: inline-flex;
+  height: 30px;
+}
+</style>

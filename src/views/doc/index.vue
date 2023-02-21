@@ -36,7 +36,8 @@ const asideList = reactive([
       { path: '/doc/button', name: 'Button 按钮' },
       { path: '/doc/dialog', name: 'Dialog 对话框' },
       { path: '/doc/link', name: 'Link 文字链接' },
-      { path: '/doc/tag', name: 'Tag 标签' }
+      { path: '/doc/tag', name: 'Tag 标签' },
+      { path: '/doc/input', name: 'Input 输入框' },
     ]
   }
 ])
