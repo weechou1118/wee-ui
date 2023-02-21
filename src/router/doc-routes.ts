@@ -2,6 +2,7 @@ import { h } from 'vue'
 import Button from '@/views/doc/button/index.vue'
 import Dialog from '@/views/doc/dialog/index.vue'
 import Link from '@/views/doc/link/index.vue'
+import Tag from '@/views/doc/tag/index.vue'
 import Markdown from '@/components/Markdown.vue'
 
 const md = (html: any) => h(Markdown, { content: html })
@@ -35,6 +36,13 @@ const routes = [
     component: Link,
     meta: {
       name: 'Link 文字链接'
+    }
+  },
+  {
+    path: 'tag',
+    component: Tag,
+    meta: {
+      name: 'Tag 标签'
     }
   },
 ]
