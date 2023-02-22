@@ -1,10 +1,17 @@
 <template>
-  <input ref="weeInput" class="wee-input" type="text" @blur="handleBlur">
+  <input ref="weeInput" class="wee-input" type="text" @blur="handleBlur" @input="handleInput">
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-const emit = defineEmits(['blur'])
+defineProps({
+  modelValue: {
+    type: String,
+    default: ''
+  }
+})
+
+const emit = defineEmits(['blur', 'update:modelValue'])
 
 const weeInput = ref()
 
@@ -14,6 +21,10 @@ onMounted(() => {
 
 const handleBlur = (e: any) => {
   emit('blur', e.target.value)
+}
+
+const handleInput = (e: any) => {
+  emit('update:modelValue', e.target.value)
 }
 
 </script>
