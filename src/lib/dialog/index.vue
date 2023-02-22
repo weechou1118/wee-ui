@@ -49,15 +49,15 @@ const props = defineProps({
     type: Function
   }
 })
-const emit = defineEmits(['update:modelValue', 'closeDialog'])
+const emits = defineEmits(['update:modelValue', 'closeDialog'])
 
 const OverlayHandle = () => {
   if (props.overlayClosable) {
-    emit('update:modelValue', false)
+    emits('update:modelValue', false)
   }
 }
 const close = () => {
-  emit('update:modelValue', false)
+  emits('update:modelValue', false)
 }
 const confirm = () => {
   if (props.confirm) {

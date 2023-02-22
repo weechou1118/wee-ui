@@ -15,7 +15,7 @@ const { type } = defineProps({
   }
 })
 
-const emit = defineEmits(['close'])
+const emits = defineEmits(['close'])
 
 const attrs = useAttrs()
 
@@ -30,7 +30,7 @@ const classes = computed(() => {
 })
 
 const handleClose = () => {
-  emit('close')
+  emits('close')
 }
 </script>
 
