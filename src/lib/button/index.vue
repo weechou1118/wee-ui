@@ -83,6 +83,8 @@ export default {
   border: 1px solid #ccc;
   transition: .2s all;
   color: #fff;
+  margin-bottom: 5px;
+  margin-right: 20px;
 }
 
 .x-icons {

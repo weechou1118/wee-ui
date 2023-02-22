@@ -32,9 +32,4 @@ const content = [
 </script>
 
 <style scoped lang="scss">
-.preview-wrapper {
-  :deep(.wee-button:not(:last-child)) {
-    margin-right: 20px;
-  }
-}
 </style>
