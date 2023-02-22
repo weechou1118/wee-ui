@@ -83,6 +83,7 @@ aside {
   }
 }
 main {
+  height: 100%;
   // 280 + 20
   padding-left: 320px;
   padding-top: 40px;
