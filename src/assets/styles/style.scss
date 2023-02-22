@@ -31,7 +31,6 @@ ul, h1, h2, p {
 }
 
 .row {
-  overflow: hidden;
   &:not(:first-child) {
     margin-top: 20px;
   }
