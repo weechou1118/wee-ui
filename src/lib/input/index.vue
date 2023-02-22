@@ -70,7 +70,13 @@ const focus = () => {
   weeInput.value.focus()
 }
 const blur = () => {
-  weeInput.value.blur()
+  nextTick(() => {
+    weeInput.value?.blur();
+    var selection = document.getSelection();
+    var range = document.createRange();
+    range.selectNode(weeInput.value);
+    selection?.removeAllRanges();
+  });
 }
 const select = () => {
   nextTick(() => {
