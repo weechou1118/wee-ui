@@ -52,7 +52,6 @@ const html = computed(() => {
   }
   &-component {
     padding: 10px 20px;
-    overflow: hidden;
   }
   &-code {
     border-top: 1px dashed #eaeaea;

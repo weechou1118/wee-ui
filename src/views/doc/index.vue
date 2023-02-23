@@ -1,6 +1,6 @@
 <!-- 文档页 -->
 <template>
-  <div class="doc-container">
+  <div class="doc-container" style="height: 100%">
     <aside>
       <template v-for="item in asideList">
         <p class="title">{{ item.title }}</p>
@@ -39,6 +39,7 @@ const asideList = reactive([
       { path: '/doc/tag', name: 'Tag 标签' },
       { path: '/doc/input', name: 'Input 输入框' },
       { path: '/doc/switch', name: 'Switch 开关' },
+      { path: '/doc/select', name: 'Select 选择器' },
     ]
   }
 ])

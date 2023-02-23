@@ -5,6 +5,8 @@ import Link from '@/views/doc/link/index.vue'
 import Tag from '@/views/doc/tag/index.vue'
 import Input from '@/views/doc/input/index.vue'
 import Switch from '@/views/doc/switch/index.vue'
+import Select from '@/views/doc/select/index.vue'
+
 import Markdown from '@/components/Markdown.vue'
 
 const md = (html: any) => h(Markdown, { content: html })
@@ -59,6 +61,13 @@ const routes = [
     component: Switch,
     meta: {
       name: 'Switch 开关'
+    }
+  },
+  {
+    path: 'select',
+    component: Select,
+    meta: {
+      name: 'Select 选择器'
     }
   },
 ]
