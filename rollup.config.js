@@ -23,7 +23,7 @@ export default {
     plugins: [terser()]
   },
   plugins: [
-    scss({ include: /.scss$/, scss: dartSass, fileName: 'wee-ui.css' }),
+    scss({ include: /.scss$/, scss: dartSass, fileName: 'wee-ui.css', prefix: `@import "./src/assets/styles/style.scss";` }),
     vue({
       include: /.vue$/
     }),
