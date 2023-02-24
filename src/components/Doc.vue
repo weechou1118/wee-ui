@@ -36,7 +36,7 @@ const headerProps = computed(() => {
 })
 </script>
 
-<style setup lang="scss">
+<style scoped lang="scss">
 table {
   width: 80%;
   margin-top: 20px;

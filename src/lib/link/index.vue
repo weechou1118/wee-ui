@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style setup lang="scss">
+<style scoped lang="scss">
 .wee-link {
   display: inline-flex;
   font-size: 16px;

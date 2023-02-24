@@ -48,7 +48,7 @@ const handleClick = () => {
 }
 </script>
 
-<style setup lang="scss">
+<style scoped lang="scss">
 .wee-switch {
   position: relative;
   cursor: pointer;
