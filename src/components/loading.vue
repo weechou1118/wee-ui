@@ -7,7 +7,7 @@ export default {
 }
 </script>
 
-<style setup lang="scss">
+<style scoped lang="scss">
 .icon {
   animation: rotate 1s infinite linear;
 }

@@ -44,6 +44,7 @@ $tag-error: #ffdddd;
   display: inline-flex;
   padding: 5px 10px;
   margin-right: 6px;
+  margin-bottom: 2px;
   border-radius: 2px;
   align-items: center;
   svg {

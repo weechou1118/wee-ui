@@ -1,6 +1,6 @@
 <!-- 文档页 -->
 <template>
-  <div class="doc-container" style="height: 100%">
+  <div class="doc-container">
     <aside>
       <template v-for="item in asideList">
         <p class="title">{{ item.title }}</p>
