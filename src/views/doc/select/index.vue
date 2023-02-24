@@ -21,6 +21,10 @@ import SelectPreview4 from './SelectPreview4.preview.vue'
 import SelectPreview5 from './SelectPreview5.preview.vue'
 
 const attrContent = [
-  [ '' ]
+  [ 'v-model', '被选择的绑定值', 'String/Array', '-', '' ],
+  [ 'options', '下拉框数据', 'Array', '-', '-' ],
+  [ 'useDisabled', '禁用状态', 'Boolean', '-', 'false' ],
+  [ 'multiple', '多选状态', 'Boolean', '-', 'false' ],
+  [ 'clearable', '是否允许被清空', 'Boolean', '-', 'false' ],
 ]
 </script>
