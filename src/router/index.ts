@@ -18,4 +18,9 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to, from) => {
+  const mainContent = document.querySelector('.main-content')
+  mainContent && mainContent.scrollTo(0, 0)
+})
+
 export default router

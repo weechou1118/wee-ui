@@ -9,7 +9,6 @@ const components = [WeeButton, WeeDialog]
 export function registerWeeUi(app: App): void {
   for (const component of components) {
     app.component(component.name, component)
-    console.log(component.name)
   }
 }
 
