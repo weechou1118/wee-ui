@@ -9,7 +9,7 @@
         closable
       >{{ item.name }}</wee-tag>
       <wee-button v-if="!showInput" @click="showInput = true">+ 新标签</wee-button>
-      <wee-input v-if="showInput" ref="weeInput" @blur="handleBlur"></wee-input>
+      <wee-input v-model="inputValue" v-if="showInput" ref="weeInput" @blur="handleBlur"></wee-input>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ const tags = ref([
 ])
 
 const weeInput = ref()
+const inputValue = ref('')
 
 const handleClose = (i: any) => {
   tags.value.splice(i, 1)
@@ -35,9 +36,9 @@ const handleClose = (i: any) => {
 
 const showInput = ref(false)
 
-const handleBlur = (val: string) => {
-  if (val) {
-    tags.value.push({ name: val, type: 'primary' })
+const handleBlur = () => {
+  if (inputValue.value) {
+    tags.value.push({ name: inputValue.value, type: 'primary' })
   }
   showInput.value = false
 }
