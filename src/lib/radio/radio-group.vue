@@ -15,7 +15,6 @@ const changeEvent = (value) => {
   emits('update:modelValue', value)
   emits('change', value)
 }
-console.log(props, 123)
 // 为了区分点击单选框后触发的事件
 provide(
   'radioGroupKey',
