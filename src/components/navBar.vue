@@ -27,6 +27,7 @@ import { version } from '../../package.json'
   width: 100%;
   height: 60px;
   line-height: 60px;
+  z-index: 1;
   border-bottom: 1px solid #ececec;
   #logo {
     width: 60px;

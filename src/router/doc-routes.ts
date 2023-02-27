@@ -6,6 +6,7 @@ import Tag from '@/views/doc/tag/index.vue'
 import Input from '@/views/doc/input/index.vue'
 import Switch from '@/views/doc/switch/index.vue'
 import Select from '@/views/doc/select/index.vue'
+import Radio from '@/views/doc/radio/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -68,6 +69,13 @@ const routes = [
     component: Select,
     meta: {
       name: 'Select 选择器'
+    }
+  },
+  {
+    path: 'radio',
+    component: Radio,
+    meta: {
+      name: 'Radio 单选框'
     }
   },
 ]

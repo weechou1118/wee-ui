@@ -40,6 +40,7 @@ const asideList = reactive([
       { path: '/doc/input', name: 'Input 输入框' },
       { path: '/doc/switch', name: 'Switch 开关' },
       { path: '/doc/select', name: 'Select 选择器' },
+      { path: '/doc/radio', name: 'Radio 单选框' },
     ]
   }
 ])
