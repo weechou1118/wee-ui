@@ -7,6 +7,7 @@ import Input from '@/views/doc/input/index.vue'
 import Switch from '@/views/doc/switch/index.vue'
 import Select from '@/views/doc/select/index.vue'
 import Radio from '@/views/doc/radio/index.vue'
+import Divider from '@/views/doc/divider/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -76,6 +77,13 @@ const routes = [
     component: Radio,
     meta: {
       name: 'Radio 单选框'
+    }
+  },
+  {
+    path: 'divider',
+    component: Divider,
+    meta: {
+      name: 'Divider 分割线'
     }
   },
 ]

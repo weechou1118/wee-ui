@@ -41,6 +41,7 @@ const asideList = reactive([
       { path: '/doc/switch', name: 'Switch 开关' },
       { path: '/doc/select', name: 'Select 选择器' },
       { path: '/doc/radio', name: 'Radio 单选框' },
+      { path: '/doc/divider', name: 'Divider 分割线' },
     ]
   }
 ])
