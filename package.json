@@ -1,7 +1,7 @@
 {
   "name": "kuma-ui",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "kuma UI 组件库",
   "files": [
     "dist/lib/*"
@@ -14,7 +14,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vicons/fluent": "^0.12.0",
     "animate.css": "^4.1.1",
     "prismjs": "^1.29.0",
     "vite-plugin-markdown": "^2.1.0",
