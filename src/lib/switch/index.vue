@@ -48,6 +48,12 @@ const handleClick = () => {
 }
 </script>
 
+<script lang="ts">
+export default {
+  name: 'WeeSwitch'
+}
+</script>
+
 <style scoped lang="scss">
 .wee-switch {
   position: relative;

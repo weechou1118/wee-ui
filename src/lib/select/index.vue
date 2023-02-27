@@ -74,6 +74,12 @@ const handleClear = () => {
 }
 </script>
 
+<script lang="ts">
+export default {
+  name: 'WeeSelect'
+}
+</script>
+
 <style scoped lang="scss">
 .wee-select {
   position: relative;

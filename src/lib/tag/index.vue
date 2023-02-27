@@ -34,6 +34,12 @@ const handleClose = () => {
 }
 </script>
 
+<script lang="ts">
+export default {
+  name: 'WeeTag'
+}
+</script>
+
 <style scoped lang="scss">
 $tag-primary: #e7f3ff;
 $tag-success: #e2f8d7;

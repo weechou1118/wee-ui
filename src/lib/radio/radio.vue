@@ -27,6 +27,12 @@ const handleClick = () => {
 }
 </script>
 
+<script lang="ts">
+export default {
+  name: 'WeeRadio'
+}
+</script>
+
 <style scoped lang="scss">
 .wee-radio {
   cursor: pointer;
