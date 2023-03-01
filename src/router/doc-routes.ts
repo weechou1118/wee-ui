@@ -8,6 +8,7 @@ import Switch from '@/views/doc/switch/index.vue'
 import Select from '@/views/doc/select/index.vue'
 import Radio from '@/views/doc/radio/index.vue'
 import Divider from '@/views/doc/divider/index.vue'
+import Message from '@/views/doc/message/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -84,6 +85,13 @@ const routes = [
     component: Divider,
     meta: {
       name: 'Divider 分割线'
+    }
+  },
+  {
+    path: 'message',
+    component: Message,
+    meta: {
+      name: 'Message 消息'
     }
   },
 ]

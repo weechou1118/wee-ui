@@ -99,7 +99,7 @@ export default {
   // 样式
   &--common {
     border: 1px solid #ccc;
-    color: #ccc;
+    color: #655f5f;
 
     &:hover {
       color: $main-color;
