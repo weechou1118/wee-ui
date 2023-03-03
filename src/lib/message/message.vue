@@ -1,13 +1,7 @@
 <template>
-  <Transition :duration="300" name="fade" appear @before-leave="onClose" @after-leave="$emit('destroy')">
-    <div 
-      v-show="showMessage"
-      class="wee-message"
-      :class="classes"
-      :id="id"
-      @mouseenter="handleEnter"
-      @mouseleave="handleLeave"
-    >
+  <transition :duration="300" name="fade" @before-leave="onClose" @after-leave="$emit('destroy')">
+    <div v-show="showMessage" class="wee-message" :class="classes" :style="customStyle" :id="id" @mouseenter="handleEnter"
+      @mouseleave="handleLeave">
       <i>
         <component :is="getIconsType"></component>
       </i>
@@ -15,7 +9,7 @@
         <div class="wee-message-content">{{ message }}</div>
       </slot>
     </div>
-  </Transition>
+  </transition>
 </template>
 
 <script setup lang="ts">
@@ -42,7 +36,7 @@ onUnmounted(() => {
 })
 
 const getIconsType = computed(() => {
-  switch(type.value) {
+  switch (type.value) {
     case 'success':
       return CheckmarkCircleOutline
     case 'warn':
@@ -86,7 +80,9 @@ function keydown({ code }: KeyboardEvent) {
   }
 }
 
-const offsetTop = computed(() => props.offset + 'px')
+const customStyle = computed(() => ({
+  top: `${props.offset}px`
+}))
 
 const classes = computed(() => {
   return {
@@ -109,7 +105,6 @@ const close = () => {
   position: fixed;
   min-width: 250px;
   height: 50px;
-  top: v-bind(offsetTop);
   left: 50%;
   transform: translateX(-50%);
   background-color: #fff;
@@ -142,20 +137,25 @@ const close = () => {
   &.is-success {
     box-shadow: $success-disabled-color 0 0 0 1px;
     background-color: #e1f3d8;
+
     svg {
       color: $success-color;
     }
   }
+
   &.is-warning {
     box-shadow: $warn-disabled-color 0 0 0 1px;
     background-color: #fdf6ec;
+
     svg {
       color: $warn-color;
     }
   }
+
   &.is-error {
     box-shadow: $error-disabled-color 0 0 0 1px;
     background-color: #fef0f0;
+
     svg {
       color: $error-color;
     }
@@ -166,8 +166,9 @@ const close = () => {
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
+
 
 .fade-enter-from,
 .fade-leave-to {

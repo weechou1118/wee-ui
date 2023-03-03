@@ -14,13 +14,11 @@ const message: any = function(options = {}) {
   }
   // 消息实例的y轴距离
   let verticalOffset = options.offset || 20
-  console.log(verticalOffset, 99999)
   // vm是单个实例
   instances.forEach(({ vm }) => {
     // 实时计算各个实例y轴距离，16是实例之间的间隔
     verticalOffset += (vm.el?.offsetHeight || 0) + 16
   })
-  console.log(verticalOffset, 123)
   // 用于关闭的时候区分关闭的是哪个消息框
   const id = `message_${flag++}`
   // 外部触发的onClose
@@ -89,7 +87,9 @@ messageTypes.forEach(type => {
 
 export function close(id: string, userOnClose?: (vm: VNode) => void): void {
   // 关闭第几个
-  const idx = instances.findIndex(({ vm }) => id === vm.component!.props.id)
+  const idx = instances.findIndex(({ vm }) => {
+    return id === vm.component?.props.id
+  })
   if (idx === -1) return
 
   const { vm } = instances[idx]
@@ -100,12 +100,12 @@ export function close(id: string, userOnClose?: (vm: VNode) => void): void {
   instances.splice(idx, 1)
 
   // 重新调整其他实例的位置
-  const len = instances.length
-  if (len < 1) return
-  for (let i = idx; i < len; i++) {
-    const pos = parseInt(instances[i].vm.el!.style['top'], 10) - removedHeight - 16
-    instances[i].vm.component!.props.offset = pos
-  }
+  // const len = instances.length
+  // if (len < 1) return
+  // for (let i = idx; i < len; i++) {
+  //   const pos = parseInt(instances[i].vm.el!.style['top'], 10) - removedHeight - 16
+  //   instances[i].vm.component!.props.offset = pos
+  // }
 }
 
 export function closeAll() {
