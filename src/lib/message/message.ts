@@ -27,6 +27,10 @@ export const messageProps = {
   offset: {
     type: Number,
     default: 20
+  },
+  duration: {
+    type: Number,
+    default: 2000
   }
 }
 
