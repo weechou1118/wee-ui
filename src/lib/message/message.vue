@@ -8,6 +8,9 @@
       <slot>
         <div class="wee-message-content">{{ message }}</div>
       </slot>
+      <i class="close" v-if="showClose" @click="close">
+        <CloseOutline />
+      </i>
     </div>
   </transition>
 </template>
@@ -15,13 +18,13 @@
 <script setup lang="ts">
 import { ref, onMounted, computed, toRefs, onUnmounted } from 'vue'
 import { messageProps, messageEmits } from './message'
-import { CheckmarkCircleOutline, InformationCircleOutline, WarningOutline, BugOutline } from '@vicons/ionicons5'
+import { CheckmarkCircleOutline, InformationCircleOutline, WarningOutline, BugOutline, CloseOutline } from '@vicons/ionicons5'
 const showMessage = ref(false)
 
 const props = defineProps(messageProps)
 defineEmits(messageEmits)
 
-const { type } = toRefs(props)
+const { type, showClose, isCenter } = toRefs(props)
 let timer: any = undefined
 
 onMounted(() => {
@@ -39,7 +42,7 @@ const getIconsType = computed(() => {
   switch (type.value) {
     case 'success':
       return CheckmarkCircleOutline
-    case 'warn':
+    case 'warning':
       return WarningOutline
     case 'error':
       return BugOutline
@@ -86,36 +89,35 @@ const customStyle = computed(() => ({
 
 const classes = computed(() => {
   return {
-    [`is-${type.value}`]: type.value
+    [`is-${type.value}`]: type.value,
+    'is-center': isCenter
   }
 })
 
 const close = () => {
   showMessage.value = false
 }
-
-// const keydown = ({ code }) => {
-//   console.log(code)
-// }
-
 </script>
 
 <style scoped lang="scss">
 .wee-message {
   position: fixed;
-  min-width: 250px;
+  min-width: 300px;
   height: 50px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #fff;
   box-shadow: #e0e0e6 0 0 0 1px;
   z-index: 1;
-  padding: 10px;
+  padding: 10px 30px 10px 10px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   border-radius: 5px;
   text-align: center;
+  &.is-center {
+    justify-content: center;
+  }
 
   &-content {
     margin-left: 10px;
@@ -125,7 +127,16 @@ const close = () => {
   i {
     display: flex;
     align-items: center;
+  }
 
+  i.close {
+    position: absolute;
+    right: 10px;
+
+    svg {
+      cursor: pointer;
+      color: #000;
+    }
   }
 
   svg {

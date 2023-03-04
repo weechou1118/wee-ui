@@ -14,7 +14,7 @@ export const messageProps = {
   },
   type: {
     type: String,
-    default: ''
+    default: 'info'
   },
   onClose: {
     type: Function,
@@ -31,6 +31,14 @@ export const messageProps = {
   duration: {
     type: Number,
     default: 2000
+  },
+  showClose: {
+    type: Boolean,
+    default: false
+  },
+  isCenter: {
+    type: Boolean,
+    default: false
   }
 }
 
