@@ -11,6 +11,7 @@ import Divider from '@/views/doc/divider/index.vue'
 import Message from '@/views/doc/message/index.vue'
 import Backup from '@/views/doc/backup/index.vue'
 import Breadcrumb from '@/views/doc/breadcrumb/index.vue'
+import Tabs from '@/views/doc/tabs/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -108,6 +109,13 @@ const routes = [
     component: Breadcrumb,
     meta: {
       name: 'Breadcrumb 面包屑'
+    }
+  },
+  {
+    path: 'tabs',
+    component: Tabs,
+    meta: {
+      name: 'Tabs 标签页'
     }
   },
 ]
