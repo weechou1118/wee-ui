@@ -10,6 +10,7 @@ import Radio from '@/views/doc/radio/index.vue'
 import Divider from '@/views/doc/divider/index.vue'
 import Message from '@/views/doc/message/index.vue'
 import Backup from '@/views/doc/backup/index.vue'
+import Breadcrumb from '@/views/doc/breadcrumb/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -100,6 +101,13 @@ const routes = [
     component: Backup,
     meta: {
       name: 'Backup 回到顶部'
+    }
+  },
+  {
+    path: 'breadcrumb',
+    component: Breadcrumb,
+    meta: {
+      name: 'Breadcrumb 面包屑'
     }
   },
 ]

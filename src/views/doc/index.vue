@@ -44,6 +44,7 @@ const asideList = reactive([
       { path: '/doc/divider', name: 'Divider 分割线' },
       { path: '/doc/message', name: 'Message 消息' },
       { path: '/doc/backup', name: 'Backup 回到顶部' },
+      { path: '/doc/breadcrumb', name: 'Breadcrumb 面包屑' },
     ]
   }
 ])
