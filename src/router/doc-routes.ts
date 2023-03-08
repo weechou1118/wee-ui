@@ -12,6 +12,7 @@ import Message from '@/views/doc/message/index.vue'
 import Backup from '@/views/doc/backup/index.vue'
 import Breadcrumb from '@/views/doc/breadcrumb/index.vue'
 import Tabs from '@/views/doc/tabs/index.vue'
+import Affix from '@/views/doc/affix/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -116,6 +117,13 @@ const routes = [
     component: Tabs,
     meta: {
       name: 'Tabs 标签页'
+    }
+  },
+  {
+    path: 'affix',
+    component: Affix,
+    meta: {
+      name: 'affix 固钉'
     }
   },
 ]
