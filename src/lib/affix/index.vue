@@ -1,7 +1,8 @@
 <template>
   <div ref="root" class="wee-affix">
-    <div :class="{ 'wee-affix-fixed': state.fixed }" :style="affixStyle"></div>
-    <slot></slot>
+    <div :class="{ 'wee-affix-fixed': state.fixed }" :style="affixStyle">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -26,19 +27,23 @@ const root = shallowRef<HTMLElement>()
 const target = shallowRef<HTMLElement>()
 
 const state = reactive({
-  fixed: false
+  fixed: false,
+  top: props.offset
 })
 
 const affixStyle = computed(() => {
-  return {}
+  return {
+    top: state.top + 'px'
+  }
 })
 
+// TODO 指定容器，使固钉不超出容器范围
 const update = () => {
   if (!root.value || !target.value) return
   const rootRect = root.value.getBoundingClientRect()
   const targetRect = target.value.getBoundingClientRect()
   if (props.position === 'top') {
-    
+    state.fixed = rootRect.top - targetRect.top < 80
   }
 }
 
@@ -55,11 +60,15 @@ onMounted(() => {
   } else {
     target.value = document.documentElement
   }
+  // 监听容器滚动
   window.addEventListener('scroll', onScroll, true)
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .wee-affix {
+  &-fixed {
+    position: fixed;
+  }
 }
 </style>
