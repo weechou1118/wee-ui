@@ -46,7 +46,7 @@ const asideList = reactive([
       { path: '/doc/backup', name: 'Backup 回到顶部' },
       { path: '/doc/breadcrumb', name: 'Breadcrumb 面包屑' },
       { path: '/doc/tabs', name: 'Tabs 标签页' },
-      { path: '/doc/affix', name: 'Affix 固钉' },
+      // { path: '/doc/affix', name: 'Affix 固钉' },
     ]
   }
 ])
